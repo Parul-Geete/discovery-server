@@ -1,8 +1,18 @@
 server:
   port: 8761
+
+spring:
+  application:
+    name: discovery-server
+
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
+    register-with-eureka: false
+    fetch-registry: false
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
